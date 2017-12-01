@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var https = require('https');
+let express = require('express');
+let router = express.Router();
+let https = require('https');
 
 
 /* GET users listing. */
@@ -22,7 +22,7 @@ router.post('/', function (req, res) {
     res.send(makeWebhookResult());
 });
 
-var makeWebhookResult = function () {
+let makeWebhookResult = function () {
     return JSON.stringify({
         "speech": "Success",
         "displayText": "Success!",
