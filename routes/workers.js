@@ -7,9 +7,9 @@ let token = '';
 
 /* GET users listing. */
 router.post('/', function (req, res) {
-    process.stdout.write("TEST");
+    console.log("TEST");
 
-    console.log(req);
+    console.log(req.body);
     res.set('Content-Type', 'application/json');
     res.set('Authorization', 'bearer ' + token);
 
@@ -18,7 +18,7 @@ router.post('/', function (req, res) {
         console.log('headers:', result.headers);
 
         result.on('data', (d) => {
-            process.stdout.write(d);
+            console.log(d);
 
             res.send(d);
         });
