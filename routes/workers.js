@@ -9,7 +9,7 @@ let token = '';
 router.post('/', function (req, res) {
     process.stdout.write("TEST");
 
-    process.stdout.write(req.body);
+    console.log(req);
     res.set('Content-Type', 'application/json');
     res.set('Authorization', 'bearer ' + token);
 
