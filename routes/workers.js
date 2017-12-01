@@ -7,6 +7,8 @@ let token = '';
 
 /* GET users listing. */
 router.post('/', function (req, res) {
+    process.stdout.write("TEST");
+
     process.stdout.write(req.body);
     res.set('Content-Type', 'application/json');
     res.set('Authorization', 'bearer ' + token);
@@ -25,7 +27,6 @@ router.post('/', function (req, res) {
         console.error(e);
     });
 
-    process.stdout.write("TEST");
 });
 
 let makeWebhookResult = function () {
